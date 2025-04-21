@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block title %}Nos kits{% endblock %}
+
+{% block content %}
+<style>
+    .card-produits {
+        border: none;
+        overflow: hidden;
+    }
+
+    .description-text {
+        display: none;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .description-text.show {
+        display: block;
+        margin-top: 1rem;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .btn-toggle {
+        margin-top: 1rem;
+    }
+
+    .carousel-item img {
+        max-height: 400px;
+        object-fit: contain;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <!-- Première carte statique -->
+        <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
+            <div class="card shadow card-produits w-100">
+                <div class="card-header bg-success text-white text-center">
+                    <h4>Kit solaire avec Stockage</h4>
+                </div>
+                <div class="card-body text-center">
+                    <div id="carouselProduits1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ url_for('static', filename='image/image3.png') }}" class="d-block w-100" alt="Kit solaire 1 image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename='image/image2.png') }}" class="d-block w-100" alt="Kit solaire 1 image 2">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduits1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProduits1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <button id="toggleBtn1" class="btn btn-outline-success btn-toggle mt-3">En savoir plus</button>
+                    <div id="description1" class="description-text">
+                        Ce kit solaire autonome est parfait pour les sites isolés, avec batterie, panneaux solaires et onduleur intégrés.
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Cartes dynamiques -->
+        {% set produits = [
+            {'id': 2, 'titre': 'Kit solaire 1KWC', 'images': ['image5.png', 'image6.png']},
+            {'id': 3, 'titre': 'Kit solaire 2KWC', 'images': ['image7.png', 'image8.png']},
+            {'id': 4, 'titre': 'Kit solaire 3KWC', 'images': ['image9.png', 'image10.png']},
+            {'id': 5, 'titre': 'Kit solaire 5KWC', 'images': ['image11.png', 'image12.png']},
+            {'id': 6, 'titre': 'Kit solaire 10KWC', 'images': ['image13.png', 'image14.png']}
+        ] %}
+
+        {% for produit in produits %}
+        <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
+            <div class="card shadow card-produits w-100">
+                <div class="card-header bg-success text-white text-center">
+                    <h4>{{ produit.titre }}</h4>
+                </div>
+                <div class="card-body text-center">
+                    <div id="carouselProduits{{ produit.id }}" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            {% for image in produit.images %}
+                            <div class="carousel-item {% if loop.first %}active{% endif %}">
+                                <img src="{{ url_for('static', filename='image/' ~ image) }}" class="d-block w-100" alt="{{ produit.titre }} - {{ loop.index }}">
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduits{{ produit.id }}" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProduits{{ produit.id }}" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <a href="https://wa.me/221772281635?text=Je%20souhaite%20soumettre%20mon%20projet%20pour%20le%20{{ produit.titre|urlencode }}" class="btn btn-success mt-3" target="_blank">
+                        Soumettre le projet 
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.getElementById('toggleBtn1');
+        const desc = document.getElementById('description1');
+        if (btn && desc) {
+            btn.addEventListener('click', function () {
+                desc.classList.toggle('show');
+            });
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5 mt-5 d-flex justify-content-center"> <!-- Centrage de la carte -->
+    <div class="card shadow-lg border-0 rounded-4 text-center p-4" style="max-width: 800px; width: 100%;"> <!-- Taille réduite -->
+        
+        <!-- Titre badge amélioré -->
+        <div class="mb-4">
+            <span class="title-app fw-bold">🚀 APPLICATION GASECO-ÉCO</span>
+        </div>
+
+        <!-- Image centrée -->
+        <img src="{{ url_for('static', filename='image/image4.png') }}" 
+             class="img-fluid rounded mx-auto d-block mb-4" 
+             alt="Gaseco Image" style="max-width: 400px;">
+
+        <!-- Texte descriptif -->
+        <div class="card-body px-md-5">
+            <h4 class="fw-bold mb-3">La Solution Africaine Intelligente pour Maîtriser Votre Énergie</h4>
+            <p>
+                Développée par les ingénieurs de <strong>Gaseco Energy</strong>, 
+                l’application <strong>Gaseco-Éco</strong> révolutionne la gestion énergétique en Afrique.
+                <br><br>
+                Sans besoin de WiFi (fonctionnement local) ou avec contrôle à distance (option WiFi), 
+                ce système tout-en-un vous permet de <strong>réduire jusqu’à 40% vos factures d’électricité</strong>,
+                surveiller et optimiser la consommation en temps réel, même dans les zones reculées.
+            </p>
+
+            <!-- Liste des bénéfices -->
+            <ul class="list-unstyled mt-4 text-start d-inline-block">
+                <li>✔ -40% sur les factures en moyenne</li>
+                <li>✔ Retour sur investissement en 6 à 12 mois</li>
+                <li>✔ +300 installations déjà opérationnelles au Sénégal</li>
+                <li>✔ Mises à jour automatiques</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Témoignages -->
+<div class="container d-flex justify-content-center">
+    <div class="card shadow-sm border-0 rounded-4 mt-5 p-4" style="max-width: 800px; width: 100%;">
+        <h5 class="fw-bold mb-4"><span style="font-size: 1.2rem;">❖</span> Nos Clients Témoignent</h5>
+        
+        <!-- Témoignage 1 -->
+        <blockquote class="blockquote text-muted mb-4">
+            <p>
+                "Grâce à <strong>Gaseco-Éco</strong>, notre école a économisé 
+                <strong><em>35%</em></strong> sur sa facture annuelle. 
+                <em>La solution la plus accessible du marché !</em>"
+            </p>
+            <p class="text-end fw-bold mb-0">Directeur d’école, Dakar</p>
+        </blockquote>
+
+        <!-- Témoignage 2 -->
+        <blockquote class="blockquote text-muted">
+            <p>
+                "Enfin une appli qui fonctionne sans <em>WiFi</em> dans mon village ! 
+                <strong>J’ai divisé</strong> ma consommation par deux."
+            </p>
+            <p class="text-end fw-bold mb-0">Particulier, Thiès</p>
+        </blockquote>
+
+        <!-- Bouton WhatsApp -->
+        <div class="text-center mt-4">
+            <a href="https://wa.me/221772281635?text=Bonjour%2C%20je%20souhaite%20économiser%20de%20l'énergie%20avec%20Gaseco-Éco." 
+               target="_blank" 
+               class="btn btn-success px-4 py-2 rounded-pill">
+                Je veux économiser
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+  body {
+    padding-top: 70px;
+  }
+
+  .carousel-item img {
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .carousel-caption {
+    bottom: 5%;
+    background: transparent; /* Pas de fond */
+    padding: 0; /* Réduit l'espace */
+    border-radius: 0;
+    backdrop-filter: none;
+  }
+  
+  
+
+  .carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-whatsapp:hover {
+    background-color: #1eb250;
+  }
+
+  .gaseco-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.8;
+    color: #333;
+  }
+
+  .card-title {
+    font-weight: bold;
+    color: #2b2b2b;
+  }
+
+  .card {
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+  }
+
+  .card:hover {
+    transform: scale(1.02);
+  }
+
+  .carousel-inner img {
+    height: 250px;
+    object-fit: cover;
+  }
+</style>
+
+<!-- Carousel principal -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <img src="{{ url_for('static', filename='image/gaseco.jpg') }}" class="d-block w-100" alt="slide1">
+      <div class="carousel-caption text-center">
+        <a href="https://wa.me/221772281635" class="btn btn-whatsapp" target="_blank">
+          Demander un devis
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='image/Accueil2.jpg') }}" class="d-block w-100" alt="slide2">
+      <div class="carousel-caption text-center">
+        <a href="https://wa.me/221772281635" class="btn btn-whatsapp" target="_blank">
+          Demander un devis
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='image/Accueil.jpg') }}" class="d-block w-100" alt="slide3">
+      <div class="carousel-caption text-center">
+        <a href="https://wa.me/221772281635" class="btn btn-whatsapp" target="_blank">
+          Demander un devis
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Texte descriptif -->
+<div class="container gaseco-text">
+  <p><strong>Gaseco Energy</strong>, c’est <em>l’innovation africaine au service des économies d’énergie.</em> 
+  <em>Fondée par des ingénieurs locaux</em>, nous concevons des solutions de domotique intelligente et d’objets connectés 
+  pour sécuriser vos espaces tout en réduisant vos factures. 
+  <em>Nos technologies vous offrent Autonomie, Économie et Durabilité Électrique.</em></p>
+</div>
+
+<!-- Cartes de services avec mini-carousels -->
+<div class="container mt-5">
+  <div class="row g-4">
+
+    <!-- Service 1 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm p-3">
+        <div id="carouselService1" class="carousel slide mb-3" data-bs-ride="carousel">
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+              <img src="{{ url_for('static', filename='image/team.jpg') }}" class="d-block w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='image/man.jpg') }}" class="d-block w-100" alt="Image 2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselService1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselService1" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Electricité & Energie Solaire</h5>
+          <p class="card-text">Nous fournissons des solutions d'électricité et d'énergie solaire adaptées aux besoins modernes, favorisant l'autonomie et la durabilité.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm p-3">
+        <div id="carouselService2" class="carousel slide mb-3" data-bs-ride="carousel">
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+              <img src="{{ url_for('static', filename='image/camera.jpg') }}" class="d-block w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='image/44mm.jpg') }}" class="d-block w-100" alt="Image 2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselService2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselService2" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Sécurité Informatique & Électronique</h5>
+          <p class="card-text">Protégez vos données et équipements avec nos solutions de sécurité informatique et électronique de pointe.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm p-3">
+        <div id="carouselService3" class="carousel slide mb-3" data-bs-ride="carousel">
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+              <img src="{{ url_for('static', filename='image/maison1.jpg') }}" class="d-block w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='image/Sand.jpg') }}" class="d-block w-100" alt="Image 2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselService3" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselService3" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Automatisation & Bureau Mobile Connecté</h5>
+          <p class="card-text">Optimisez vos opérations grâce à des solutions d'automatisation et des bureaux mobiles connectés pour une performance maximale.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% block footer %}
+<footer class="bg-dark text-light pt-5 pb-3 mt-5">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- Logo and description -->
+            <div class="col-md-3 mb-4">
+                <img src="{{ url_for('static', filename='image/logo.jpg') }}" alt="Logo GASECO" class="mb-3" width="60">
+                <p class="text-green">
+                    Autonomie, Économie et Durabilité électrique 
+                </p>
+            </div>
+
+            <!-- Important Links -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-green fw-bold">Important</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ url_for('index') }}" class="text-green text-decoration-none">Accueil</a></li>
+                    <li><a href="{{ url_for('about') }}" class="text-green text-decoration-none">À propos</a></li>
+                    <li><a href="{{ url_for('produit') }}" class="text-green text-decoration-none">Produit</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-green fw-bold">Contactez-nous</h5>
+                <p><i class="bi bi-envelope-fill text-green me-2"></i> contactgasecoenergy@gmail.com</p>
+                <p><i class="bi bi-telephone-fill text-green me-2"></i> +221 77 228 16 35</p>
+                <p><i class="bi bi-geo-alt-fill text-green me-2"></i> Dakar, Sénégal</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-3 mb-4 text-center text-md-start">
+                <h5 class="text-green fw-bold">Suivez-nous</h5>
+                <!-- Social Media Icons at the Bottom -->
+                <div class="social-icons">
+                    <a href="#" class="text-green me-3 fs-4"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-green me-3 fs-4"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-green me-3 fs-4"><i class="bi bi-tiktok"></i></a>
+                    <a href="#" class="text-green fs-4"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Embedded CSS -->
+<style>
+    footer {
+        background-color: #343a40;
+        color: #90ee90 !important;
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+
+    footer .text-green {
+        color: #90ee90 !important;
+    }
+
+    footer h5, footer p, footer a, footer li {
+        color: #90ee90 !important;
+    }
+
+    footer a:hover {
+        color: #76c76d !important;
+    }
+
+    footer .bi {
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+        color: #90ee90 !important;
+    }
+
+    footer .bi:hover {
+        transform: scale(1.2);
+    }
+
+    footer .col-md-3 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    footer .social-icons {
+        margin-top: 1rem;
+    }
+</style>
+{% endblock footer %}
