@@ -47,10 +47,10 @@
                     <div id="carouselProduits1" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{{ url_for('static', filename='image/image3.png') }}" class="d-block w-100" alt="Kit solaire 1 image 1">
+                                <img src="{{ url_for('static', filename='image/Image3.png') }}" class="d-block w-100" alt="Kit solaire 1 image 1">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ url_for('static', filename='image/image2.png') }}" class="d-block w-100" alt="Kit solaire 1 image 2">
+                                <img src="{{ url_for('static', filename='image/Image2.png') }}" class="d-block w-100" alt="Kit solaire 1 image 2">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduits1" data-bs-slide="prev">
@@ -71,17 +71,17 @@
 
         <!-- Cartes dynamiques -->
         {% set produits = [
-            {'id': 2, 'titre': 'Kit solaire 1KWC', 'images': ['image5.png', 'image6.png']},
-            {'id': 3, 'titre': 'Kit solaire 2KWC', 'images': ['image7.png', 'image8.png']},
-            {'id': 4, 'titre': 'Kit solaire 3KWC', 'images': ['image9.png', 'image10.png']},
-            {'id': 5, 'titre': 'Kit solaire 5KWC', 'images': ['image11.png', 'image12.png']},
-            {'id': 6, 'titre': 'Kit solaire 10KWC', 'images': ['image13.png', 'image14.png']},
-            {'id': 7, 'titre': 'Kit Pompe submersible', 'images': ['image15.png', 'image16.png']},
-            {'id': 8, 'titre': 'Kit Pompe de surface', 'images': ['image17.png', 'image18.png']},
-            {'id': 9, 'titre': 'kit Camera Analogique', 'images': ['image19.png', 'image20.png']},
-            {'id': 10, 'titre': 'kit Camera IP', 'images': ['image21.png', 'image22.png']},
-            {'id': 11, 'titre': 'Kit  Camera solaire', 'images': ['image23.png', 'image24.png']},
-            {'id': 12, 'titre': 'Kit  Alarme', 'images': ['image25.png', 'image26.png']},
+            {'id': 2, 'titre': 'Kit solaire 1KWC', 'images': ['Image5.png', 'Image6.png']},
+            {'id': 3, 'titre': 'Kit solaire 2KWC', 'images': ['Image7.png', 'Image8.png']},
+            {'id': 4, 'titre': 'Kit solaire 3KWC', 'images': ['Image9.png', 'Image10.png']},
+            {'id': 5, 'titre': 'Kit solaire 5KWC', 'images': ['Image11.png', 'Image12.png']},
+            {'id': 6, 'titre': 'Kit solaire 10KWC', 'images': ['Image13.png', 'Image14.png']},
+            {'id': 7, 'titre': 'Kit Pompe submersible', 'images': ['Image15.png', 'Image16.png']},
+            {'id': 8, 'titre': 'Kit Pompe de surface', 'images': ['Image17.png', 'Image18.png']},
+            {'id': 9, 'titre': 'kit Camera Analogique', 'images': ['Image19.png', 'Image20.png']},
+            {'id': 10, 'titre': 'kit Camera IP', 'images': ['Image21.png', 'Image22.png']},
+            {'id': 11, 'titre': 'Kit  Camera solaire', 'images': ['Image23.png', 'Image24.png']},
+            {'id': 12, 'titre': 'Kit  Alarme', 'images': ['Image25.png', 'Image26.png']},
         ] %}
 
         {% for produit in produits %}
