@@ -7,11 +7,7 @@
       }
     ],
     "routes": [
-
-        {
-            "src": "/(.*)",
-            "dest": "/static/image"
-          },
+        
       {
         "src": "/(.*)",
         "dest": "/app.py"
