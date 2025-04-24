@@ -10,11 +10,11 @@
         </div>
 
         <!-- Contenu principal -->
-        <div class="card-body px-md-5">
-            <!-- Image centrée (placée dans card-body pour ne pas sortir) -->
+        <div class="card-body px-3 px-md-5">
+            <!-- Image centrée (responsive sur mobile) -->
             <img src="{{ url_for('static', filename='image/Image4.png') }}" 
                  class="img-fluid rounded mx-auto d-block mb-4" 
-                 alt="Gaseco Image" style="max-width: 400px;">
+                 alt="Gaseco Image" style="max-width: 100%; height: auto;">
 
             <!-- Titre & description -->
             <h4 class="fw-bold mb-3">La Solution Africaine Intelligente pour Maîtriser Votre Énergie</h4>
@@ -71,4 +71,3 @@
 </div>
 
 {% endblock content %}
- 
