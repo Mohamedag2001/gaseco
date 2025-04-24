@@ -1,21 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container py-5 mt-5 d-flex justify-content-center"> <!-- Centrage de la carte -->
-    <div class="card shadow-lg border-0 rounded-4 text-center p-4" style="max-width: 800px; width: 100%;"> <!-- Taille réduite -->
+<div class="container py-5 mt-5 d-flex justify-content-center">
+    <div class="card shadow-lg border-0 rounded-4 text-center p-4" style="max-width: 800px; width: 100%;">
         
-        <!-- Titre badge amélioré -->
+        <!-- Titre -->
         <div class="mb-4">
             <span class="title-app fw-bold">🚀 APPLICATION GASECO-ÉCO</span>
         </div>
 
-        <!-- Image centrée -->
-        <img src="{{ url_for('static', filename='image/Image4.png') }}" 
-             class="img-fluid rounded mx-auto d-block mb-4" 
-             alt="Gaseco Image" style="max-width: 400px;">
-
-        <!-- Texte descriptif -->
+        <!-- Contenu principal -->
         <div class="card-body px-md-5">
+            <!-- Image centrée (placée dans card-body pour ne pas sortir) -->
+            <img src="{{ url_for('static', filename='image/Image4.png') }}" 
+                 class="img-fluid rounded mx-auto d-block mb-4" 
+                 alt="Gaseco Image" style="max-width: 400px;">
+
+            <!-- Titre & description -->
             <h4 class="fw-bold mb-3">La Solution Africaine Intelligente pour Maîtriser Votre Énergie</h4>
             <p>
                 Développée par les ingénieurs de <strong>Gaseco Energy</strong>, 
@@ -41,8 +42,7 @@
 <div class="container d-flex justify-content-center">
     <div class="card shadow-sm border-0 rounded-4 mt-5 p-4" style="max-width: 800px; width: 100%;">
         <h5 class="fw-bold mb-4"><span style="font-size: 1.2rem;">❖</span> Nos Clients Témoignent</h5>
-        
-        <!-- Témoignage 1 -->
+
         <blockquote class="blockquote text-muted mb-4">
             <p>
                 "Grâce à <strong>Gaseco-Éco</strong>, notre école a économisé 
@@ -52,7 +52,6 @@
             <p class="text-end fw-bold mb-0">Directeur d’école, Dakar</p>
         </blockquote>
 
-        <!-- Témoignage 2 -->
         <blockquote class="blockquote text-muted">
             <p>
                 "Enfin une appli qui fonctionne sans <em>WiFi</em> dans mon village ! 
@@ -61,7 +60,6 @@
             <p class="text-end fw-bold mb-0">Particulier, Thiès</p>
         </blockquote>
 
-        <!-- Bouton WhatsApp -->
         <div class="text-center mt-4">
             <a href="https://wa.me/221772281635?text=Bonjour%2C%20je%20souhaite%20économiser%20de%20l'énergie%20avec%20Gaseco-Éco." 
                target="_blank" 
@@ -73,3 +71,4 @@
 </div>
 
 {% endblock content %}
+ 
