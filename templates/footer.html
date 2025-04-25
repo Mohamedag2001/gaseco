@@ -13,16 +13,16 @@
             <div class="col-md-3 mb-4">
                 <h5 class="text-green fw-bold">Important</h5>
                 <ul class="list-unstyled">
-                    <li><a href="{{ url_for('index') }}" class="text-green text-decoration-none">Accueil</a></li>
-                    <li><a href="{{ url_for('about') }}" class="text-green text-decoration-none">À propos</a></li>
-                    <li><a href="{{ url_for('produit') }}" class="text-green text-decoration-none">Produit</a></li>
+                    <li class="mb-2"><a href="{{ url_for('index') }}" class="text-green text-decoration-none">Accueil</a></li>
+                    <li class="mb-2"><a href="{{ url_for('about') }}" class="text-green text-decoration-none">À propos</a></li>
+                    <li class="mb-2"><a href="{{ url_for('produit') }}" class="text-green text-decoration-none">Produit</a></li>
                 </ul>
             </div>
             <!-- Contact Info -->
             <div class="col-md-3 mb-4">
                 <h5 class="text-green fw-bold">Contactez-nous</h5>
                 <p><i class="bi bi-envelope-fill text-green me-2"></i> contactgasecoenergy@gmail.com</p>
-                <p><i class="bi bi-telephone-fill text-green me-2"></i> +221 77 228 16 35</p>
+                <p class="phone"><i class="bi bi-telephone-fill text-green me-2"></i> +221 77 228 16 35 / +221 78 921 49 39</p>
                 <p><i class="bi bi-geo-alt-fill text-green me-2"></i> Dakar, Sénégal</p>
             </div>
 
@@ -80,5 +80,9 @@
     footer .social-icons {
         margin-top: 1rem;
     }
+    footer p.phone {
+        white-space: nowrap;
+    }
+    
 </style>
 {% endblock footer %}
